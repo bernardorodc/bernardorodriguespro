@@ -1,0 +1,1233 @@
+/* --- Updated Styles based on User Feedback (Light & Modern) --- */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+    /* New Light Palette */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FA; /* Subtle background variation */
+    --text-primary: #212529; /* Darker text for better contrast */
+    --text-secondary: #6C757D; /* Lighter gray for secondary text */
+    --accent-primary: #7B2CBF; /* Refined Purple */
+    --accent-secondary: #9D4EDD; /* Lighter Purple for hover/details */
+    --border-color: #DEE2E6; /* Light border color */
+    --white: #FFFFFF;
+
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Lato", sans-serif;
+
+    --container-width: 1140px;
+    --padding-section: 80px 0; /* Increased padding for more space */
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    line-height: 1.7; /* Slightly increased line height */
+    background-color: var(--bg-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--text-primary);
+    /* Removed default margin-bottom here */
+}
+
+h1 { font-size: 3rem; line-height: 1.3; margin-bottom: 2rem; } /* Increased line-height and margin */
+h2 { font-size: 2.5rem; line-height: 1.3; margin-bottom: 2rem; text-align: center;} /* Added line-height */
+h3 { font-size: 1.75rem; margin-top: 3rem; margin-bottom: 1.25rem; color: var(--accent-primary); } /* Adjusted margin */
+h4 { font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 1rem; } /* Added margin */
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary); /* Use secondary text color for paragraphs */
+    max-width: 700px; /* Limit paragraph width for readability */
+}
+
+p.intro-text {
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+     margin-bottom: 3rem;
+     font-size: 1.1rem;
+}
+
+a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-secondary);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section {
+    padding: var(--padding-section);
+    /* Remove alternating backgrounds for fluidity */
+    background-color: var(--bg-primary); /* Use primary background for all sections */
+    /* Consider adding subtle borders or using --bg-secondary for slight differentiation if needed */
+}
+
+/* Remove the :nth-child rule */
+/* section:nth-child(even) {
+    background-color: var(--bg-secondary);
+} */
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 35px; /* Keep size */
+    border-radius: var(--border-radius);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none; /* Remove border for gradient buttons */
+    color: #fff; /* Ensure text is white for contrast */
+    background-image: linear-gradient(90deg, #7B2CBF 0%, #48D1CC 100%); /* Purple to Cyan Gradient */
+    background-size: 100% auto; /* Start with 100% size */
+    box-shadow: 0 4px 15px rgba(123, 44, 191, 0.2); /* Keep initial shadow */
+    text-align: center;
+}
+
+.btn:hover {
+    background-size: 150% auto; /* Slightly expand gradient on hover */
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.3); /* Keep hover shadow */
+    transform: translateY(-3px); /* Keep hover transform */
+    color: #fff; /* Ensure text remains white */
+}
+
+.btn-secondary {
+    /* Apply gradient like primary button */
+    color: #fff; /* Ensure text is white */
+    /* border: none; Remove border */
+    /* background-color: transparent; Remove transparent background */
+    /* background-image: none; Remove override */
+    /* Apply the same gradient and hover effects as .btn */
+    /* Note: We can achieve this by simply removing the .btn-secondary definition */
+    /* Or by copying the .btn styles here. Let's remove it for simplicity if */
+    /* the user wants ALL buttons identical. */
+    /* Let's try modifying it first to keep the class */
+    display: inline-block; /* Ensure display properties are set */
+    padding: 14px 35px;
+    border-radius: var(--border-radius);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none; /* Remove border */
+    background-image: linear-gradient(90deg, #7B2CBF 0%, #48D1CC 100%); /* Purple to Cyan Gradient */
+    background-size: 100% auto;
+    box-shadow: 0 4px 15px rgba(123, 44, 191, 0.2);
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background-size: 150% auto; /* Match primary hover */
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.3); /* Match primary hover */
+    transform: translateY(-3px); /* Match primary hover */
+    color: #fff; /* Ensure text remains white */
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--bg-primary);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Lighter shadow */
+    border-bottom: 1px solid var(--border-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary); /* Logo text dark */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px; /* Increased spacing */
+}
+
+nav ul li a {
+    color: var(--text-secondary); /* Nav links secondary color */
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary);
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary); /* Hamburger color */
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* --- Hero Section --- */
+#hero {
+    min-height: 70vh; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 120px; /* Increased padding */
+    padding-bottom: 120px;
+    background-color: var(--bg-primary); /* Ensure light background */
+}
+
+#hero .container {
+    max-width: 850px;
+}
+
+#hero h1 {
+    margin-bottom: 1.5rem;
+}
+
+#hero p {
+    font-size: 1.15rem; /* Slightly larger text */
+    margin-bottom: 2.5rem;
+    color: var(--text-secondary);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero .btn {
+    margin: 0.5rem;
+}
+
+/* --- Sobre Section --- */
+#sobre {
+     /* background-color: var(--bg-secondary); */ /* Keep primary bg for fluidity */
+}
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Increased gap */
+    /* flex-direction: row-reverse; */ /* Option: Reverse image/text order */
+}
+
+.sobre-img {
+    flex: 0 0 40%; /* Fixed width for image container */
+    max-width: 400px; /* Max width */
+    margin: 0 auto; /* Center if needed on smaller screens */
+}
+
+.sobre-img img {
+    border-radius: 50%; /* Make image circular */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Softer shadow */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Ensure it's a circle */
+    object-fit: cover;
+}
+
+.sobre-texto {
+    flex: 1; /* Text takes remaining space */
+    background-color: var(--bg-secondary); /* Subtle background for text area */
+    padding: 30px; /* Add padding inside the text area */
+    border-radius: var(--border-radius); /* Match other elements */
+}
+.sobre-texto h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    margin-top: 0; /* Remove top margin if inside padded box */
+}
+.sobre-texto p {
+    max-width: none; /* Remove width limit within this container */
+    margin-bottom: 1.5rem; /* Increase paragraph spacing */
+}
+
+/* --- Serviços Section --- */
+#servicos {
+     background-color: var(--bg-primary);
+}
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px; /* Increased gap */
+    margin-top: 3rem;
+}
+
+.servico-card {
+    background-color: var(--bg-primary);
+    padding: 35px;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.03); */ /* Removed default shadow for cleaner look */
+}
+
+.servico-card:hover {
+    transform: translateY(-5px); /* Slightly less lift */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* Softer hover shadow */
+}
+
+.servico-card h4 {
+    margin-bottom: 1rem;
+    color: var(--accent-primary);
+}
+
+/* --- Diferenciais Section --- */
+#diferenciais {
+     background-color: var(--bg-secondary);
+}
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.diferencial-item {
+    text-align: center;
+    padding: 25px;
+}
+
+.diferencial-item h4 {
+    margin-top: 1rem;
+    color: var(--text-primary);
+}
+
+/* --- Portfolio Section --- */
+#portfolio {
+     background-color: var(--bg-primary);
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin-top: 3rem;
+}
+
+.portfolio-card {
+    background-color: var(--bg-primary);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.03); */ /* Removed default shadow */
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px); /* Slightly less lift */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* Softer hover shadow */
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 220px; /* Adjusted height */
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.portfolio-card h4 {
+    padding: 25px 25px 5px 25px;
+    color: var(--accent-primary);
+}
+
+.portfolio-card p {
+    padding: 0 25px 20px 25px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* --- Currículo Section (Redesigned) --- */
+#curriculo {
+    /* background-color: var(--bg-secondary); */ /* Keep primary bg for fluidity */
+}
+
+#curriculo .container > h2,
+#curriculo .container > p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#curriculo .container > p {
+    max-width: 700px;
+    margin-bottom: 3rem;
+}
+
+.curriculo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.curriculo-card {
+    background-color: var(--bg-secondary); /* Use secondary for cards */
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curriculo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.curriculo-card h4 {
+    color: var(--accent-primary);
+    margin-bottom: 1.5rem; /* More space below title */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and title */
+    font-size: 1.2rem;
+}
+
+.curriculo-card h4 i { /* Style for icons */
+    font-size: 1.3em; /* Slightly larger icon */
+    color: var(--accent-primary);
+    width: 25px; /* Fixed width for alignment */
+    text-align: center;
+}
+
+.curriculo-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.curriculo-card li {
+    margin-bottom: 0.8rem; /* More space between items */
+    position: relative;
+    padding-left: 25px; /* Space for custom bullet/icon */
+    color: var(--text-secondary);
+}
+
+.curriculo-card li::before { /* Custom bullet */
+    content: "\f105"; /* Font Awesome angle-right icon */
+    font-family: "Font Awesome 6 Free"; /* Ensure Font Awesome is used */
+    font-weight: 900; /* Use solid style */
+    color: var(--accent-primary);
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1.5em; /* Position before text */
+    position: absolute;
+    left: 10px;
+    font-size: 0.9em;
+}
+
+.curriculo-card li strong {
+    color: var(--text-primary);
+}
+
+/* Specific adjustments for skills list if needed */
+.curriculo-card#habilidades-card ul {
+    /* columns: 2; */ /* Removed columns for better readability on cards */
+    /* column-gap: 20px; */
+}
+
+@media (max-width: 768px) {
+    .curriculo-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+    .curriculo-card#habilidades-card ul {
+        /* columns: 1; */ /* Ensure single column */
+    }
+}
+
+/* --- Contato Section --- */
+#contato {
+     background-color: var(--bg-primary);
+}
+.contato-container {
+    display: flex;
+    gap: 60px;
+}
+
+.contato-info {
+    flex: 1;
+}
+.contato-info h2 {
+    text-align: left;
+}
+.contato-info p {
+    max-width: none;
+}
+
+.contato-opcoes {
+    margin-top: 2rem;
+}
+
+.contato-opcoes p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.contato-opcoes .btn {
+    margin-bottom: 1.5rem;
+}
+
+.redes-sociais a {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+.redes-sociais a:hover {
+    color: var(--accent-primary);
+}
+
+.contato-form {
+    flex: 1.2; /* Slightly more space for form */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 8px rgba(123, 44, 191, 0.2);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 0;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+footer a {
+    color: var(--text-secondary);
+}
+
+footer a:hover {
+    color: var(--accent-primary);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+    :root {
+        --padding-section: 60px 0;
+    }
+    .container {
+        max-width: 960px;
+    }
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 2.2rem; }
+    nav ul li {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    section { padding: 50px 0; }
+
+    nav {
+        position: absolute;
+        top: 100%; /* Position below header */
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-primary);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+        border-top: 1px solid var(--border-color);
+    }
+    nav.active {
+        max-height: 500px; /* Adjust as needed */
+        border-top: 1px solid var(--border-color);
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    nav ul li a {
+        display: block;
+        padding: 12px 20px;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+    nav ul li a:hover, nav ul li a.active {
+        background-color: var(--bg-secondary);
+        color: var(--accent-primary);
+        border-bottom-color: var(--border-color); /* Keep border consistent */
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger */
+    }
+    /* Animate hamburger icon */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .sobre-container, .contato-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .sobre-img {
+        max-width: 300px;
+        margin: 0 auto 30px auto;
+    }
+    .sobre-texto h2, .contato-info h2 {
+        text-align: center;
+    }
+
+    .contato-info {
+        margin-bottom: 30px;
+    }
+    .contato-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --padding-section: 40px 0;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+
+    #hero {
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    .servicos-grid,
+    .diferenciais-grid,
+    .portfolio-grid,
+    .curriculo-blocos {
+        grid-template-columns: 1fr; /* Stack cards/items */
+        gap: 25px;
+    }
+    .servico-card, .portfolio-card {
+        padding: 25px;
+    }
+    .portfolio-card h4, .portfolio-card p {
+         padding-left: 25px;
+         padding-right: 25px;
+    }
+}
+
+
+
+
+/* --- Luna AI System Section (Revised Style) --- */
+#luna-ai {
+    background-color: var(--bg-secondary); /* Match other sections like curriculo */
+    padding: var(--padding-section);
+    /* Removed dark background, texture, and pseudo-elements */
+}
+
+#luna-ai .container {
+    /* No specific container styles needed now */
+}
+
+.luna-title {
+    text-align: center;
+    font-size: 2.5rem; /* Keep title large */
+    margin-bottom: 1rem;
+    /* More subtle gradient using accent colors */
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.luna-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    color: var(--text-secondary); /* Use standard secondary text color */
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.luna-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 3rem;
+}
+
+.luna-card {
+    background: var(--bg-primary); /* Match standard card background */
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    /* Removed glassmorphism (backdrop-filter) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Keep hover effect */
+}
+
+.luna-card:hover {
+    /* Keep standard card hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.luna-card h4 {
+    color: var(--accent-primary); /* Use primary accent */
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+}
+
+.luna-card h4 i {
+    font-size: 1.4em;
+    color: var(--accent-primary);
+    width: 25px;
+    text-align: center;
+}
+
+.luna-card p {
+    color: var(--text-secondary); /* Use standard secondary text color */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.luna-cta {
+    text-align: center;
+    display: flex; /* Arrange buttons side-by-side */
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.luna-cta .btn {
+    padding: 15px 35px; /* Keep larger CTA button size */
+    font-size: 1.1rem;
+}
+
+/* Remove light theme adjustments specific to the old dark design */
+/* html[data-theme='light'] ... rules removed */
+
+
+
+
+
+/* --- Card Hover Effects --- */
+.servico-card:hover,
+.luna-card:hover,
+.curriculo-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Add slight zoom */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07); /* Enhance shadow slightly */
+}
+
+.diferencial-item:hover {
+    transform: scale(1.05); /* Add scale effect */
+    transition: transform 0.3s ease;
+}
+
+
+
+/* --- Luna Casos de Uso Section --- */
+#luna-casos-uso {
+    background-color: var(--bg-secondary); /* Alternate background */
+}
+
+.casos-uso-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.caso-uso-card {
+    background-color: var(--bg-primary);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+}
+
+.caso-uso-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.caso-uso-card h4 {
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.caso-uso-card h4 i {
+    font-size: 1.3em;
+    color: var(--accent-primary);
+    width: 25px;
+    text-align: center;
+}
+
+.caso-uso-card p {
+    flex-grow: 1; /* Make paragraph take available space */
+    margin-bottom: 1.5rem; /* Space before button */
+    color: var(--text-secondary);
+}
+
+.btn-small {
+    padding: 8px 18px; /* Smaller padding */
+    font-size: 0.85rem; /* Smaller font size */
+    letter-spacing: 0.5px;
+    align-self: flex-start; /* Align button to the start */
+    /* Inherits gradient and hover from .btn */
+}
+
+
+
+/* --- Back to Top Button --- */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Hidden by default */
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(90deg, #7B2CBF 0%, #48D1CC 100%); /* Match button gradient */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px; /* Center icon vertically */
+    cursor: pointer;
+    z-index: 999;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#back-to-top:hover {
+    opacity: 0.8;
+}
+
+
+
+/* --- Header Controls (Language & Theme Switch) --- */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.btn-icon {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    line-height: 1; /* Ensure icon vertical alignment */
+}
+
+.btn-icon:hover {
+    background-color: var(--bg-secondary);
+    color: var(--accent-primary);
+    border-color: var(--accent-secondary);
+}
+
+.btn-icon i {
+    font-size: 1.1rem; /* Adjust icon size if needed */
+}
+
+/* Adjust header container for controls */
+header .container {
+    /* Existing styles */
+    /* Ensure enough space if needed, might not be necessary with flexbox */
+}
+
+/* Responsive adjustments for header controls */
+@media (max-width: 768px) {
+    .header-controls {
+        /* Decide where to place controls on mobile */
+        /* Option 1: Keep in header */
+        /* Option 2: Move inside the mobile menu */
+        /* For now, keep in header, adjust spacing if needed */
+        gap: 10px;
+        margin-left: auto; /* Push controls to the right, before menu toggle */
+        margin-right: 10px;
+    }
+    nav {
+        /* Existing styles */
+        order: 3; /* Ensure nav comes after controls and toggle */
+        width: 100%; /* Ensure it takes full width below */
+    }
+    .menu-toggle {
+        order: 2; /* Place toggle after controls */
+    }
+    header .container {
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+}
+
+
+
+
+/* --- Dark Mode --- */
+body.dark-mode {
+    --bg-primary: #121212;
+    --bg-secondary: #1E1E1E; /* Slightly lighter dark background */
+    --text-primary: #E0E0E0; /* Light gray text */
+    --text-secondary: #B0B0B0; /* Dimmer gray for secondary text */
+    --accent-primary: #BB86FC; /* Purple accent for dark mode */
+    --accent-secondary: #9A67EA; /* Lighter purple for hover */
+    --border-color: #333333; /* Darker border color */
+    --white: #FFFFFF; /* White remains white */
+
+    /* Adjust specific elements for dark mode if needed */
+    /* Example: Ensure shadows are visible or adjusted */
+    box-shadow: none; /* Remove body shadow if any */
+}
+
+body.dark-mode header {
+    background-color: var(--bg-secondary);
+    border-bottom-color: var(--border-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Darker shadow */
+}
+
+body.dark-mode .logo {
+    /* Consider using the white logo variant */
+    /* Example: .logo img { content: url('assets/logo_wav_branco.webp'); } */
+    /* For now, keep the black one, contrast might be okay */
+    color: var(--text-primary);
+}
+
+body.dark-mode nav ul li a {
+    color: var(--text-secondary);
+}
+
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav ul li a.active {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary);
+}
+
+body.dark-mode .menu-toggle span {
+    background-color: var(--text-primary);
+}
+
+body.dark-mode #hero {
+    background-color: var(--bg-primary);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--text-primary);
+}
+
+body.dark-mode h3 { /* Keep accent color for H3 */
+    color: var(--accent-primary);
+}
+
+body.dark-mode p {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .btn {
+    /* Keep gradient, adjust shadow if needed */
+    box-shadow: 0 4px 15px rgba(187, 134, 252, 0.15); /* Lighter shadow with accent color */
+}
+
+body.dark-mode .btn:hover {
+    box-shadow: 0 6px 20px rgba(187, 134, 252, 0.25);
+}
+
+body.dark-mode .sobre-texto {
+    background-color: var(--bg-secondary);
+}
+
+body.dark-mode .servico-card,
+body.dark-mode .portfolio-card,
+body.dark-mode .curriculo-card,
+body.dark-mode .luna-card,
+body.dark-mode .caso-uso-card,
+body.dark-mode .diferencial-item {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .servico-card:hover,
+body.dark-mode .portfolio-card:hover,
+body.dark-mode .curriculo-card:hover,
+body.dark-mode .luna-card:hover,
+body.dark-mode .caso-uso-card:hover,
+body.dark-mode .diferencial-item:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Darker hover shadow */
+}
+
+body.dark-mode .servico-card h4,
+body.dark-mode .portfolio-card h4,
+body.dark-mode .curriculo-card h4,
+body.dark-mode .luna-card h4,
+body.dark-mode .caso-uso-card h4 {
+    color: var(--accent-primary);
+}
+
+body.dark-mode .curriculo-card li::before {
+    color: var(--accent-primary);
+}
+
+body.dark-mode .curriculo-card li strong {
+    color: var(--text-primary);
+}
+
+body.dark-mode .contato-info p strong {
+    color: var(--text-primary);
+}
+
+body.dark-mode .form-group label {
+    color: var(--text-primary);
+}
+
+body.dark-mode .form-group input[type="text"],
+body.dark-mode .form-group input[type="email"],
+body.dark-mode .form-group textarea {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 8px rgba(187, 134, 252, 0.2);
+}
+
+body.dark-mode footer {
+    background-color: var(--bg-secondary);
+    border-top-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+body.dark-mode footer a {
+    color: var(--text-secondary);
+}
+
+body.dark-mode footer a:hover {
+    color: var(--accent-primary);
+}
+
+body.dark-mode .btn-icon {
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .btn-icon:hover {
+    background-color: var(--bg-primary); /* Darker hover */
+    color: var(--accent-primary);
+    border-color: var(--accent-secondary);
+}
+
+/* Add transitions for smooth theme change */
+body, header, section, footer, .servico-card, .portfolio-card, .curriculo-card, .luna-card, .caso-uso-card, .diferencial-item, .sobre-texto, input, textarea, .btn, .btn-icon {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ensure icons also transition color */
+i.service-icon, .btn-icon i {
+    transition: color 0.3s ease;
+}
+
+/* Adjust logo transition if needed */
+.logo img {
+    transition: filter 0.3s ease; /* Example: could invert colors */
+}
+
+/* Dark mode logo swap (optional, requires JS to change src or class) */
+/* body.dark-mode .logo img { */
+/*    content: url('assets/logo_wav_branco.webp'); */
+/* } */
+
+
+
+
+.logo img {
+    height: 80px; /* Increased logo height */
+    vertical-align: middle; /* Helps with alignment within the flex container */
+    margin-right: 20px; /* Add some margin to the right for spacing */
+}
+
+
+
+.diferencial-icon {
+    font-size: 2.5rem; /* Adjust icon size */
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+    display: block; /* Ensure it takes its own line */
+}
+
+
+
+/* --- Responsiveness Fixes (Currículo & Contato) --- */
+@media (max-width: 768px) {
+    /* Currículo Card List Items */
+    .curriculo-card li {
+        padding-left: 20px; /* Reduce padding slightly */
+    }
+    .curriculo-card li::before {
+        left: 5px; /* Adjust icon position */
+        margin-left: -1.2em;
+    }
+
+    /* Contato Info Alignment */
+    .contato-info {
+        text-align: center; /* Center text in stacked layout */
+    }
+    .contato-info h2 {
+        text-align: center;
+    }
+    .contato-opcoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center buttons */
+    }
+    .redes-sociais {
+        margin-top: 1rem; /* Add space above social icons */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Currículo Card Title */
+    .curriculo-card h4 {
+        font-size: 1.1rem; /* Slightly smaller title on very small screens */
+        flex-wrap: wrap; /* Allow title and icon to wrap if needed */
+    }
+    .curriculo-card li {
+        font-size: 0.95rem; /* Slightly smaller list text */
+    }
+
+    /* Contato Form Padding */
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        padding: 12px; /* Reduce padding */
+    }
+}
+

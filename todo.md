@@ -1,0 +1,22 @@
+# Todo - Melhorias Landing Page
+
+- [x] **1. Aumentar Logo:** Modificar CSS ou HTML para aumentar a altura da logo no header para 60px.
+- [x] **2. Remover Botões Cards:** Remover os elementos `<a>` com as classes `btn btn-secondary btn-small` de dentro dos `.caso-uso-card` na seção `luna-casos-uso` no `index.html`.
+- [x] **3. Adicionar Botão Idioma:**
+    - [x] Adicionar botão "PT | EN" no header HTML.
+    - [x] Criar estrutura de dados para textos (PT/EN) em `script.js` (usar placeholders para EN).
+    - [x] Implementar função JS para trocar textos (sem reload).
+    - [x] Adicionar IDs ou classes aos elementos de texto a serem traduzidos no HTML.
+    - [x] Adicionar chamada da função ao clique do botão.
+    - [x] (Opcional) Salvar preferência no localStorage.
+- [x] **4. Adicionar Botão Modo Claro/Escuro:**
+    - [x] Adicionar botão com ícone (sol/lua) no header HTML.
+    - [x] Definir variáveis CSS para tema escuro em `:root` ou `body.dark-mode`.
+    - [x] Implementar função JS para alternar classe `dark-mode` no `<body>`.
+    - [x] Implementar função JS para trocar ícone do botão.
+    - [x] Adicionar transições CSS suaves para cores/backgrounds.
+    - [x] Adicionar chamada das funções ao clique do botão.
+    - [x] (Opcional) Salvar preferência no localStorage.
+- [x] **5. Testar:** Verificar todas as funcionalidades implementadas.
+- [x] **6. Documentar:** Escrever breve resumo das alterações.
+- [x] **7. Entregar:** Enviar arquivos atualizados e resumo.
