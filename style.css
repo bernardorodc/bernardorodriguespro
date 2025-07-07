@@ -1420,3 +1420,31 @@ i.service-icon, .btn-icon i {
     }
 }
 
+
+/* --- Portfolio Links Styles --- */
+.portfolio-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.portfolio-links a {
+    text-decoration: none;
+}
+
+.portfolio-links a.btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.portfolio-links i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+.portfolio-links i:hover {
+    color: var(--accent-secondary);
+}
+
