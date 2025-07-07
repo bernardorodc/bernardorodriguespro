@@ -1231,3 +1231,147 @@ i.service-icon, .btn-icon i {
     }
 }
 
+
+
+/* --- Luna AI Section Styles --- */
+#section-luna-ai {
+    padding: var(--padding-section);
+    background-color: var(--bg-secondary);
+}
+
+#section-luna-ai h2 {
+    color: var(--accent-primary);
+    margin-bottom: 2rem;
+}
+
+#section-luna-ai h3 {
+    color: var(--accent-primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#section-luna-ai ul {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+#section-luna-ai ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.luna-cta {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-secondary);
+    transform: translateY(-2px);
+}
+
+.luna-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.luna-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.luna-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for Luna AI section */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .luna-gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+
+/* --- IFP Section Styles --- */
+#section-ifp {
+    padding: var(--padding-section);
+    background-color: var(--bg-primary);
+}
+
+#section-ifp h2 {
+    color: var(--accent-primary);
+    margin-bottom: 2rem;
+}
+
+#section-ifp h3 {
+    color: var(--accent-primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#section-ifp ul {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+#section-ifp ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.ifp-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.ifp-gallery img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.ifp-gallery img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments for IFP section */
+@media (max-width: 768px) {
+    .ifp-gallery img {
+        max-width: 100%;
+    }
+}
+
